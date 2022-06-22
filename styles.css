@@ -20,13 +20,14 @@ main {
   padding-top: 200px;
 }
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .nav {
   display: flex;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.1);
   position: fixed;
@@ -36,14 +37,12 @@ main {
   height: 105px;
   list-style-type: none;
   background-color: #111827;
-  padding-top: 40px;
 }
 .nav__logo {
-  top: 0;
-  position: absolute;
+  margin-left: 10px;
 }
 .nav__bar {
-  padding-left: 120px;
+  padding-left: 90px;
 }
 .nav__bar a {
   padding: 20px;
@@ -54,12 +53,12 @@ main {
 .nav__bar :hover {
   background-color: #ddd;
   color: black;
-  padding: 30px 30px;
+  padding: 5px 30px;
 }
 .info {
   margin: 0 auto;
   width: 20rem;
-  height: 35rem;
+  height: 40rem;
   text-align: center;
   color: #ddd;
   background-color: rgba(28, 21, 21, 0.837);
