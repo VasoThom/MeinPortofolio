@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="kontakt.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Kontakt</title>
   </head>
   <body>
@@ -20,26 +21,37 @@
       </div>
     </header>
     <section id="kontakt">
-      <h1>Kontakt</h1>
-      <br />
-      <label for="">Name</label>
-      <br />
-      <input type="text" />
-      <br />
-      <label for="Surname"></label>
-      <br />
-      <input type="text" />
-      <br />
-      <label for="">Email</label>
-      <br />
-      <input type="email" />
-      <br />
-      <label for="">Message</label>
-      <br />
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <br />
-      <button>Send</button>
+      <h1 class="kontakth1">Kontakt</h1>
+      <form action="https://formspree.io/f/xpzbeylp" method="POST">
+        <br />
+        <label for="name">Name*</label>
+        <br />
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="surname">Surname*</label>
+        <br />
+        <input type="text" id="surname" name="surname" required />
+        <br />
+        <label for="email">Email*</label>
+        <br />
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="sms">Message</label>
+        <br />
+        <textarea
+          name="message"
+          id="sms"
+          cols="30"
+          rows="10"
+          placeholder="Write a message "
+        ></textarea>
+        <br />
+        <button type="submit">Send</button>
+      </form>
       <br />
     </section>
+    <footer id="footer">
+      Copyright Ⓒ 2022 Vaso Thomopoulou.All Rights Reserved
+    </footer>
   </body>
 </html>

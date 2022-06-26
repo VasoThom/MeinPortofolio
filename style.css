@@ -1,0 +1,284 @@
+/* home */
+
+.info {
+  margin: 0 auto;
+
+  text-align: center;
+  color: #ddd;
+  background-color: rgba(28, 21, 21, 0.837);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.info img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.title {
+  margin-bottom: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    padding: 1em 8em;
+    flex-direction: column;
+  }
+
+  .info img {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .info {
+    padding: 1em 15em;
+    flex-direction: column;
+  }
+
+  .info img {
+    width: 400px;
+    height: 500px;
+  }
+}
+/* Aboume me  */
+#about {
+  padding-top: 10rem;
+}
+.aboutheader {
+  margin-top: 1rem;
+  color: black;
+  width: 150px;
+  font-size: 30px;
+  margin-bottom: 1rem;
+  text-align: center;
+  border: 1px solid white;
+  background-color: #ddd;
+}
+.abouttext {
+  margin-top: 40px;
+  color: #ddd;
+  font-size: 20px;
+  background-color: rgba(28, 21, 21, 0.837);
+  width: 28rem;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .abouttext {
+    width: 45rem;
+  }
+  .aboutheader {
+    font-size: 45px;
+    width: 30rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .abouttext {
+    width: 25rem;
+  }
+  .aboutheader {
+    font-size: 45px;
+    width: 15rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 20px;
+  }
+  #about {
+    padding-top: 7rem;
+  }
+}
+
+/* Portfolio */
+#portfolio {
+  margin-top: 3rem;
+  padding-top: 10rem;
+  position: absolute;
+  width: 500px;
+  height: 50%;
+  top: 10rem;
+  left: 1rem;
+
+  background-color: rgba(7, 10, 7, 0.837);
+  border-radius: 15%;
+  color: white;
+  animation: opening 3s linear 1 forwards;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  #portfolio {
+    width: 50%;
+    left: 30rem;
+    border-radius: 80px;
+  }
+}
+@media (min-width: 768px) {
+  #portfolio {
+    width: 50%;
+    left: 13rem;
+    border-radius: 60px;
+  }
+}
+
+#portfolio h1 {
+  position: absolute;
+  top: 3rem;
+  animation: heading 2s 1s 1 forwards ease-in;
+  opacity: 0;
+  font-size: 5rem;
+}
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+#portfolio h2 {
+  position: absolute;
+  animation: heading3 2s 2s 1 linear;
+  opacity: 0;
+  font-size: 4rem;
+}
+
+@keyframes heading3 {
+  0% {
+    color: #ff5733;
+    font-size: 0.5rem;
+    opacity: 1;
+  }
+
+  30% {
+    font-size: 1rem;
+  }
+  40% {
+    color: #33ff57;
+    font-size: 1rem;
+  }
+  60% {
+    color: #ff3376;
+    font-size: 2rem;
+  }
+
+  80% {
+    color: #9633ff;
+    font-size: 3rem;
+  }
+
+  100% {
+    color: rgb(4, 0, 255);
+    opacity: 1;
+    font-size: 4rem;
+  }
+}
+#portfolio p {
+  position: absolute;
+  opacity: 0;
+  font-size: x-large;
+  text-align: left;
+  top: 70%;
+  animation: load 1s 6s forwards linear;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    left: 20%;
+    opacity: 1;
+  }
+}
+
+/* Kontakt */
+
+#kontakt {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.kontakth1 {
+  color: white;
+  margin-top: 70px;
+  font-size: 2rem;
+}
+.kontakth1:hover {
+  color: #33ff57;
+}
+label {
+  color: #ddd;
+  font-size: 1rem;
+}
+input {
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 350px;
+  background-color: rgb(50, 49, 49);
+  opacity: 0.8;
+  color: #ddd;
+}
+textarea {
+  width: 400px;
+  opacity: 0.8;
+  color: #ddd;
+  background-color: rgb(50, 49, 49);
+  font-size: 1rem;
+}
+button {
+  padding: 2rem 3rem;
+  border-radius: 45%;
+  border: none;
+  color: rgb(246, 243, 243);
+  background-color: rgb(136, 30, 30);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  input {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 0;
+  }
+  textarea {
+    width: 200px;
+    height: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  input {
+    font-size: 20px;
+    padding: 25px;
+    width: 500px;
+  }
+  textarea {
+    width: 600px;
+    height: 200px;
+    font-size: 2rem;
+  }
+  label {
+    font-size: 30px;
+  }
+  .kontakth1 {
+    font-size: 3rem;
+  }
+}
+button {
+  font-size: 1.5rem;
+}
