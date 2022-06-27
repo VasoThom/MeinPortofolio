@@ -43,17 +43,16 @@ main {
   height: 105px;
   list-style-type: none;
   background-color: #111827;
+  z-index: 99;
 }
 .nav__logo {
   margin-left: 10px;
 }
-.nav__bar {
-  padding-left: 90px;
-}
+
 .nav__bar a {
   padding: 20px;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 .nav__bar a:hover {
@@ -61,14 +60,12 @@ main {
   padding: 5px 30px;
 }
 
-@media screen and (min-width: 375px) {
-  .nav {
-    flex-direction: row;
-  }
+@media screen and (max-width: 558px) {
   .nav__bar a {
-    font-size: 1rem;
-    padding: 3px;
+    font-size: 18px;
+    padding: 2px;
   }
+
   /* .logo {
     display: none;
   } */
@@ -78,13 +75,19 @@ main {
   .nav__bar a {
     font-size: 2rem;
   }
+  .nav__bar {
+    padding-left: 90px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .nav__bar a {
     font-size: 3rem;
     padding: 30px;
+    padding-left: 60px;
   }
+
+  /* Footer */
 }
 #footer {
   background-color: #333;

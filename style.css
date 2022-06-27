@@ -133,7 +133,6 @@
   position: absolute;
   top: 3rem;
   animation: heading 2s 1s 1 forwards ease-in;
-  opacity: 0;
   font-size: 5rem;
 }
 
@@ -146,43 +145,55 @@
     opacity: 1;
   }
 }
-#portfolio h2 {
-  position: absolute;
-  animation: heading3 2s 2s 1 linear;
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
   opacity: 0;
-  font-size: 4rem;
+  animation: fade-out 3s linear 3s;
 }
-
-@keyframes heading3 {
+@keyframes fade-out {
   0% {
-    color: #ff5733;
-    font-size: 0.5rem;
     opacity: 1;
   }
-
-  30% {
-    font-size: 1rem;
-  }
-  40% {
-    color: #33ff57;
-    font-size: 1rem;
-  }
-  60% {
-    color: #ff3376;
-    font-size: 2rem;
-  }
-
-  80% {
-    color: #9633ff;
-    font-size: 3rem;
-  }
-
   100% {
-    color: rgb(4, 0, 255);
-    opacity: 1;
-    font-size: 4rem;
+    opacity: 0;
   }
 }
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.3s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #portfolio p {
   position: absolute;
   opacity: 0;
@@ -206,6 +217,11 @@
 /* Kontakt */
 
 #kontakt {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGFibGV8ZW58MHx8MHx8&w=1000&q=80);
   padding: 5rem;
   display: flex;
   justify-content: center;
@@ -240,8 +256,8 @@ textarea {
   font-size: 1rem;
 }
 button {
-  padding: 2rem 3rem;
-  border-radius: 45%;
+  padding: 1rem 4rem;
+  border-radius: 10px;
   border: none;
   color: rgb(246, 243, 243);
   background-color: rgb(136, 30, 30);
@@ -252,31 +268,35 @@ button {
 
 @media (max-width: 450px) {
   input {
-    padding: 10px;
-    width: 200px;
+    padding: 15px;
+    width: 300px;
     margin-bottom: 0;
   }
   textarea {
     width: 200px;
     height: 100px;
   }
+  button {
+    padding: 0.5rem 3rem;
+  }
 }
 @media (min-width: 1200px) {
   input {
-    font-size: 20px;
-    padding: 25px;
+    font-size: 15px;
+    padding: 15px;
     width: 500px;
   }
   textarea {
     width: 600px;
-    height: 200px;
+    height: 180px;
     font-size: 2rem;
   }
   label {
-    font-size: 30px;
+    font-size: 25px;
   }
   .kontakth1 {
     font-size: 3rem;
+    margin-top: 40px;
   }
 }
 button {
