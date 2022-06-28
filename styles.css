@@ -31,6 +31,7 @@ main {
 }
 
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +49,9 @@ main {
 .nav__logo {
   margin-left: 10px;
 }
-
+.nav__bar {
+  display: flex;
+}
 .nav__bar a {
   padding: 20px;
   color: white;
@@ -57,18 +60,52 @@ main {
 }
 .nav__bar a:hover {
   color: rgb(26, 183, 26);
-  padding: 5px 30px;
+}
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
 }
 
 @media screen and (max-width: 558px) {
-  .nav__bar a {
-    font-size: 18px;
-    padding: 2px;
+  .checkbtn {
+    display: block;
+  }
+  header {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
-  /* .logo {
-    display: none;
-  } */
+  .nav__bar {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    top: 90px;
+    left: 100%;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  .nav__bar a {
+    display: block;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .nav__bar a:hover {
+    color: green;
+  }
+  #check:checked ~ .nav__bar {
+    left: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
