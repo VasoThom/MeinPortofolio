@@ -136,3 +136,9 @@ main {
   position: fixed;
   text-align: center;
 }
+@media screen and (max-width: 450px) {
+  #footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
